@@ -3,22 +3,27 @@ import fetchProducts from '../../api/fetchProducts.js';
 
 import './Products.css';
 import ProductCard from '../ProductCard/ProductCard.jsx';
+import Loading from '../Loading/Loading.jsx';
 
 function Products() {
-  const[products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     fetchProducts('iphone').then((response) => {
       setProducts(response);
+      setLoading(false);
 
     });
   }, []);
 
-  console.log(products);
   return ( 
-    <section className="products container">
-      {products.map((product) => <ProductCard key={product.id} data={product} />)}
-    </section>
+    (loading && <Loading /> ) || (
+      <section className="products container">
+        {products.map((product) => <ProductCard key={product.id} data={product} />)}
+      </section>
+    )
   );
 
 }
