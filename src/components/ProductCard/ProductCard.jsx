@@ -1,4 +1,5 @@
 import React from 'react';
+import {BsFillCartPlusFill} from 'react-icons/bs';
 
 import './ProductCard.css';
 
@@ -13,7 +14,9 @@ function ProductCard() {
         <h2 className="card__title"> kkkk</h2>
 
       </div>
-      <button type="button" className="button__add-card" >+</button>
+      <button type="button" className="button__add-cart">
+        <BsFillCartPlusFill/>
+      </button>
     </section>
   );
 }
