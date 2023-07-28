@@ -1,10 +1,15 @@
 import React from 'react';
+import SearchBar from '../SearchBar/SearchBar';
+import CartButton from '../CartButton/CartButton';
+
+import './Header.css';
 
 function Header() {
   return(
-    <header className="header" style={{background: 'red'}}>
+    <header className="header">
       <div className="container">
-      oihfeo
+        <SearchBar/>
+        <CartButton/>
       </div>
     </header>
   );
