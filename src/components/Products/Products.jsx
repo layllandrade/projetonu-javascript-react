@@ -18,7 +18,7 @@ function Products() {
   console.log(products);
   return ( 
     <section className="products container">
-      <ProductCard/>
+      <ProductCard data={{}}/>
     </section>
   );
 
