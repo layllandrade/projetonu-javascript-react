@@ -10,3 +10,7 @@
 body {
   background-color: #ebebeb;
 }
+.container {
+  maxWidth:1100; 
+  margin: 0 auto;
+}

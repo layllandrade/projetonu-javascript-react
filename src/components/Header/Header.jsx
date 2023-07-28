@@ -2,7 +2,11 @@ import React from 'react';
 
 function Header() {
   return(
-    <header></header>
+    <header className="header" style={{background: 'red'}}>
+      <div className="container">
+      oihfeo
+      </div>
+    </header>
   );
 }
 
