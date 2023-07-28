@@ -20,7 +20,8 @@ function SearchBar () {
 
   };
   return ( 
-    <form className="search-bar" onSubmit={handleSearch}> 
+    <form className="search-bar" onSubmit={handleSearch}>
+      {name}
       <input type="search"
         value={searchValue}
         placeholder="Buscar produtos" 
